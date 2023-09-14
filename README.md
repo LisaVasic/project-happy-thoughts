@@ -1,13 +1,7 @@
 # Happy Thoughts
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The assignment was to build a simple API to collect 'happy thoughts'. The app should show the latest 20 thoughts and you should be able to add your own thought to the list. I followed a given design.
 
 ## View it live
 
-lisa-happy-thoughts.netlify.app
+https://lisa-happy-thoughts.netlify.app
