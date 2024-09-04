@@ -7,9 +7,10 @@ export const App = () => {
   const [loading, setLoading] = useState(false);
   const [newThought, setNewThought] = useState('');
 
+  // Fetches the thought list API
   const fetchThoughts = () => {
     setLoading(true);
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts')
+    fetch('https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts')
       .then((res) => res.json())
       .then((data) => setThoughtsList(data))
       .catch((error) => console.error(error))
@@ -20,6 +21,7 @@ export const App = () => {
     fetchThoughts();
   }, []);
 
+  // Handles the new thought that the user puts in the field and updates the state
   const handleNewThoughtChange = (event) => {
     setNewThought(event.target.value)
   }
@@ -28,7 +30,7 @@ export const App = () => {
     event.preventDefault();
 
     const options = {
-      method: 'POST',
+      method: 'POST', // sends data to the server
       headers: {
         'Content-Type': 'application/json'
       },
@@ -37,12 +39,13 @@ export const App = () => {
       })
     }
 
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts', options)
+    fetch('https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts', options)
       .then((res) => res.json())
       .then(() => fetchThoughts())
       .finally(() => setNewThought(''));
   }
 
+  // Shows the components the inputfield and the thoughts list
   return (
     <div>
       <ThoughtsForm

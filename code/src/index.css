@@ -60,12 +60,16 @@ h1 {
   margin-top: 5%;
 }
 
-.heartButton {
+.emptyBtn, .likeBtn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: none;
   margin-right: 5px;
+}
+
+.likeBtn {
+  background-color: #f3b1af;
 }
 
 .cardFooter {
