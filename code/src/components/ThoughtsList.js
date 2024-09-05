@@ -3,7 +3,7 @@ import React from 'react';
 import { formatDistance } from 'date-fns';
 
 // eslint-disable-next-line no-unused-vars
-const ThoughtsList = ({ loading, thoughtsList, setThoughtsList, onLikesIncrease }) => {
+const ThoughtsList = ({ loading, thoughtsList, onLikesIncrease }) => {
   if (loading) {
     return <h1>Loading in progress...</h1>
   }
